@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         // 데이터 받기
         data = (DaumSearchResultModel.Channel.Item)getIntent().getSerializableExtra("data");
-
+        System.out.println(data);
         web = (WebView)findViewById(R.id.web);  // 웹뷰 객체 획득
 
         web.loadUrl(data.getLink());    // 로딩
